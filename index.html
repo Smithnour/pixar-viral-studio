@@ -76,5 +76,37 @@ You won’t believe what happens to this little rabbit...
 
   window.speechSynthesis.speak(speech);
 }
+
+  <button onclick="generateImages()">🎨 Generate Scene Images</button>
+  <pre id="output"></pre>
+  <div id="images"></div>
+  function generateImages() {
+  let container = document.getElementById("images");
+  container.innerHTML = "";
+
+  let scenes = [
+    "Pixar 3D rabbit walking in rainy forest cinematic lighting",
+    "Pixar 3D rabbit discovering injured bird emotional scene",
+    "Pixar 3D rabbit facing dark predator dramatic lighting",
+    "Pixar 3D emotional sunrise hope ending cinematic"
+  ];
+
+  scenes.forEach((scene, index) => {
+    let imgUrl = "https://image.pollinations.ai/prompt/" + encodeURIComponent(scene);
+
+    let img = document.createElement("img");
+    img.src = imgUrl;
+    img.style.width = "250px";
+    img.style.margin = "10px";
+    img.style.borderRadius = "10px";
+
+    let title = document.createElement("p");
+    title.innerText = "Scene " + (index + 1);
+
+    container.appendChild(title);
+    container.appendChild(img);
+  });
+}
+  
   
 </html>
