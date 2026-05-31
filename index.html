@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pixar Viral Studio</title>
+</head>
+<body>
+
+  <h1>Pixar Viral Story Generator</h1>
+
+  <input id="idea" placeholder="اكتب فكرة القصة هنا..." style="width:300px;padding:10px;">
+  <button onclick="generate()">Generate</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    function generate() {
+      let idea = document.getElementById("idea").value;
+
+      if (!idea) {
+        idea = "A lonely rabbit finds hope in the forest";
+      }
+
+      let character = "small white rabbit, Pixar 3D style, emotional eyes, soft fur";
+
+      let result = `
+🎬 STORY IDEA:
+${idea}
+
+🐰 CHARACTER:
+${character}
+
+📌 SCENE 1:
+${character}, walking alone in rainy forest, cinematic lighting
+
+📌 SCENE 2:
+${character}, discovering something emotional on the ground
+
+📌 SCENE 3:
+${character}, facing danger in dark forest
+
+📌 SCENE 4:
+${character}, emotional ending, sunrise, hope
+
+🎨 IMAGE PROMPT:
+Pixar 3D animation, ultra detailed, cinematic lighting, emotional scene, 9:16
+      `;
+
+      document.getElementById("output").innerText = result;
+    }
+  </script>
+
+</body>
+</html>
