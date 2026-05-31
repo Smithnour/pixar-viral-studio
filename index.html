@@ -23,7 +23,48 @@
 
       let character = "small white rabbit, Pixar 3D style, emotional eyes, soft fur";
 
-      let result = `
+      function generate() {
+  let idea = document.getElementById("idea").value;
+
+  if (!idea) {
+    idea = "A lonely rabbit finds hope in a dark forest";
+  }
+
+  let character = "small white rabbit, Pixar 3D style, emotional eyes, soft fur, cinematic lighting";
+
+  let hook = "Something unexpected is about to change everything...";
+
+  let story = `
+🔥 VIRAL HOOK:
+${hook}
+
+🎬 STORY:
+${idea}
+
+🐰 MAIN CHARACTER:
+${character}
+
+📌 SCENE 1 (HOOK - 0-3s):
+${character}, emotional close-up, dramatic lighting, something mysterious happens
+
+📌 SCENE 2 (BUILD-UP):
+${character}, discovering a problem, emotional tension rises
+
+📌 SCENE 3 (CLIMAX):
+${character}, facing danger or emotional loss, intense cinematic scene
+
+📌 SCENE 4 (EMOTIONAL ENDING):
+${character}, resolution, hope or sadness, sunrise cinematic light
+
+🎨 FINAL IMAGE PROMPT:
+Pixar-style 3D animation, ultra realistic, cinematic lighting, emotional storytelling, depth of field, 9:16 vertical video
+
+🎥 VIRAL TITLE IDEA:
+You won’t believe what happens to this little rabbit...
+  `;
+
+  document.getElementById("output").innerText = story;
+      }
 🎬 STORY IDEA:
 ${idea}
 
