@@ -60,4 +60,21 @@ You won’t believe what happens to this little rabbit...
   </script>
 
 <button onclick="speakText()">🔊 Play Voice</button>
+  function speakText() {
+  let text = document.getElementById("output").innerText;
+
+  if (!text) {
+    alert("Generate a story first!");
+    return;
+  }
+
+  let speech = new SpeechSynthesisUtterance();
+  speech.text = text;
+  speech.lang = "en-US";
+  speech.rate = 1;
+  speech.pitch = 1;
+
+  window.speechSynthesis.speak(speech);
+}
+  
 </html>
